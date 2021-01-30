@@ -1,10 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using EdgarAparicio.APIDepartamentosEsperanza.Repository.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,6 +28,9 @@ namespace APIDepartamentosEsperanza
         /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<Context>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("DepartamentosEsperanzaConnectionString")));
+
             services.AddControllers();
             services.AddSwaggerGen(setupAction => 
             {
@@ -37,8 +43,25 @@ namespace APIDepartamentosEsperanza
                         Version = "1"
                     }
                 );
-            
+
+                //Obtenemos el directorio actual
+                var basePath = AppContext.BaseDirectory;
+                //Obtenemos el nombre de la dll por medio de reflexión
+                var assemblyName = System.Reflection.Assembly
+                              .GetEntryAssembly().GetName().Name;
+                //Al nombre del assembly le agregamos la extensión xml
+                var fileName = System.IO.Path
+                              .GetFileName(assemblyName + ".xml");
+                //Agregamos el Path, es importante utilizar el comando
+                // Path.Combine ya que entre windows y linux 
+                // rutas de los archivos
+                // En windows es por ejemplo c:/Uusuarios con / 
+                // y en linux es \usr con \
+                var xmlPath = Path.Combine(basePath, fileName);
+                setupAction.IncludeXmlComments(xmlPath);
             });
+
+            
         }
 
          
@@ -72,7 +95,7 @@ namespace APIDepartamentosEsperanza
                     "/swagger/DepartamentOpenAPISpecification/swagger.json",
                     "Departament API"
                     );
-                //Permite que al ejecutar la aplicacion la pantalla a mostrar sea la UI de swagger
+                //Permite que al ejecutar la aplicacion y la pantalla a mostrar sea la UI de swagger
                 setupAction.RoutePrefix = "";
             });
 

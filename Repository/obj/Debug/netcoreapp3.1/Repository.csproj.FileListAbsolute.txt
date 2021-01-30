@@ -1,0 +1,15 @@
+C:\Users\edgar\Google Drive\Applications Development\Git\APIDepartamentosEsperanza\Repository\bin\Debug\netcoreapp3.1\Repository.deps.json
+C:\Users\edgar\Google Drive\Applications Development\Git\APIDepartamentosEsperanza\Repository\bin\Debug\netcoreapp3.1\Repository.dll
+C:\Users\edgar\Google Drive\Applications Development\Git\APIDepartamentosEsperanza\Repository\obj\Debug\netcoreapp3.1\Repository.csprojAssemblyReference.cache
+C:\Users\edgar\Google Drive\Applications Development\Git\APIDepartamentosEsperanza\Repository\obj\Debug\netcoreapp3.1\Repository.AssemblyInfoInputs.cache
+C:\Users\edgar\Google Drive\Applications Development\Git\APIDepartamentosEsperanza\Repository\obj\Debug\netcoreapp3.1\Repository.AssemblyInfo.cs
+C:\Users\edgar\Google Drive\Applications Development\Git\APIDepartamentosEsperanza\Repository\bin\Debug\netcoreapp3.1\Repository.pdb
+C:\Users\edgar\Google Drive\Applications Development\Git\APIDepartamentosEsperanza\Repository\bin\Debug\netcoreapp3.1\Entity.dll
+C:\Users\edgar\Google Drive\Applications Development\Git\APIDepartamentosEsperanza\Repository\bin\Debug\netcoreapp3.1\Entity.pdb
+C:\Users\edgar\Google Drive\Applications Development\Git\APIDepartamentosEsperanza\Repository\obj\Debug\netcoreapp3.1\Repository.csproj.CopyComplete
+C:\Users\edgar\Google Drive\Applications Development\Git\APIDepartamentosEsperanza\Repository\obj\Debug\netcoreapp3.1\Repository.dll
+C:\Users\edgar\Google Drive\Applications Development\Git\APIDepartamentosEsperanza\Repository\obj\Debug\netcoreapp3.1\Repository.pdb
+C:\Users\edgar\Google Drive\Applications Development\Git\APIDepartamentosEsperanza\Repository\bin\Debug\netcoreapp3.1\Repository.runtimeconfig.json
+C:\Users\edgar\Google Drive\Applications Development\Git\APIDepartamentosEsperanza\Repository\bin\Debug\netcoreapp3.1\Repository.runtimeconfig.dev.json
+C:\Users\edgar\Google Drive\Applications Development\Git\APIDepartamentosEsperanza\Repository\obj\Debug\netcoreapp3.1\Repository.genruntimeconfig.cache
+C:\Users\edgar\Google Drive\Applications Development\Git\APIDepartamentosEsperanza\Repository\obj\Debug\netcoreapp3.1\Repository.csproj.CoreCompileInputs.cache
