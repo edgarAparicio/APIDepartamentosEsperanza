@@ -28,7 +28,7 @@ namespace APIDepartamentosEsperanza
         /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<Context>(options =>
+            services.AddDbContext<DepartamentosEsperanzaContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DepartamentosEsperanzaConnectionString")));
 
             services.AddControllers();
