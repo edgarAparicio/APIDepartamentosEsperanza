@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "RUanaJqsTTmU2TDinTUSH1TxVDq8Hn27S6j71Uu4mzu4BJHosataAjw8RqQyEKkiCA/G1E3Y1h+bop4gbq4DZw==",
+  "dgSpecHash": "ZjFLkSK1ymmuAtj8hyfBe1f2yCIV8cgwnbLsM4Yquaeyn8hcV0vIPuhBTCM0/zv6fdRir395sg0NRPWfFB9HFg==",
   "success": true,
   "projectFilePath": "C:\\Users\\edgar\\Google Drive\\Applications Development\\Git\\APIDepartamentosEsperanza\\APIDepartamentosEsperanza\\APIDepartamentosEsperanza.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\edgar\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\edgar\\.nuget\\packages\\microsoft.openapi\\1.1.4\\microsoft.openapi.1.1.4.nupkg.sha512",
+    "C:\\Users\\edgar\\.nuget\\packages\\swashbuckle.aspnetcore\\5.0.0\\swashbuckle.aspnetcore.5.0.0.nupkg.sha512",
+    "C:\\Users\\edgar\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.0.0\\swashbuckle.aspnetcore.swagger.5.0.0.nupkg.sha512",
+    "C:\\Users\\edgar\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.0.0\\swashbuckle.aspnetcore.swaggergen.5.0.0.nupkg.sha512",
+    "C:\\Users\\edgar\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.0.0\\swashbuckle.aspnetcore.swaggerui.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
