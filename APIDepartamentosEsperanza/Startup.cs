@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using EdgarAparicio.APIDepartamentosEsperanza.Manager.Interfaces;
+using EdgarAparicio.APIDepartamentosEsperanza.Manager.Manager;
 using EdgarAparicio.APIDepartamentosEsperanza.Repository.Context;
+using EdgarAparicio.APIDepartamentosEsperanza.Repository.Interfaces;
+using EdgarAparicio.APIDepartamentosEsperanza.Repository.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -32,33 +36,35 @@ namespace APIDepartamentosEsperanza
             options.UseSqlServer(Configuration.GetConnectionString("DepartamentosEsperanzaConnectionString")));
 
             services.AddControllers();
+            services.AddScoped(typeof(IUserManager), typeof(UserManager));
+            services.AddScoped(typeof(IUser), typeof(UserRepository));
             services.AddSwaggerGen(setupAction => 
             {
                 setupAction.SwaggerDoc
                 (
-                    "DepartamentOpenAPISpecification",
+                    "V1",
                     new Microsoft.OpenApi.Models.OpenApiInfo()
                     {
                         Title = "Departments API",
-                        Version = "1"
+                        Version = "V1"
                     }
                 );
 
-                //Obtenemos el directorio actual
-                var basePath = AppContext.BaseDirectory;
-                //Obtenemos el nombre de la dll por medio de reflexión
-                var assemblyName = System.Reflection.Assembly
-                              .GetEntryAssembly().GetName().Name;
-                //Al nombre del assembly le agregamos la extensión xml
-                var fileName = System.IO.Path
-                              .GetFileName(assemblyName + ".xml");
-                //Agregamos el Path, es importante utilizar el comando
-                // Path.Combine ya que entre windows y linux 
-                // rutas de los archivos
-                // En windows es por ejemplo c:/Uusuarios con / 
-                // y en linux es \usr con \
-                var xmlPath = Path.Combine(basePath, fileName);
-                setupAction.IncludeXmlComments(xmlPath);
+                ////Obtenemos el directorio actual
+                //var basePath = AppContext.BaseDirectory;
+                ////Obtenemos el nombre de la dll por medio de reflexión
+                //var assemblyName = System.Reflection.Assembly
+                //              .GetEntryAssembly().GetName().Name;
+                ////Al nombre del assembly le agregamos la extensión xml
+                //var fileName = System.IO.Path
+                //              .GetFileName(assemblyName + ".xml");
+                ////Agregamos el Path, es importante utilizar el comando
+                //// Path.Combine ya que entre windows y linux 
+                //// rutas de los archivos
+                //// En windows es por ejemplo c:/Uusuarios con / 
+                //// y en linux es \usr con \
+                //var xmlPath = Path.Combine(basePath, fileName);
+                //setupAction.IncludeXmlComments(xmlPath);
             });
 
             
@@ -92,8 +98,8 @@ namespace APIDepartamentosEsperanza
             app.UseSwaggerUI(setupAction =>
             {
                 setupAction.SwaggerEndpoint(
-                    "/swagger/DepartamentOpenAPISpecification/swagger.json",
-                    "Departament API"
+                    "/swagger/V1/swagger.json",
+                    "DepartmentsAPI"
                     );
                 //Permite que al ejecutar la aplicacion y la pantalla a mostrar sea la UI de swagger
                 setupAction.RoutePrefix = "";

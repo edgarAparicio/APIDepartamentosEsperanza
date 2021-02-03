@@ -70,3 +70,5 @@ C:\Users\edgar\Google Drive\Applications Development\Git\APIDepartamentosEsperan
 C:\Users\edgar\Google Drive\Applications Development\Git\APIDepartamentosEsperanza\APIDepartamentosEsperanza\obj\Debug\netcoreapp3.1\APIDepartamentosEsperanza.csproj.CoreCompileInputs.cache
 C:\Users\edgar\Google Drive\Applications Development\Git\APIDepartamentosEsperanza\APIDepartamentosEsperanza\obj\Debug\netcoreapp3.1\APIDepartamentosEsperanza.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\edgar\Google Drive\Applications Development\Git\APIDepartamentosEsperanza\APIDepartamentosEsperanza\obj\Debug\netcoreapp3.1\APIDepartamentosEsperanza.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\edgar\Google Drive\Applications Development\Git\APIDepartamentosEsperanza\APIDepartamentosEsperanza\bin\Debug\netcoreapp3.1\Manager.dll
+C:\Users\edgar\Google Drive\Applications Development\Git\APIDepartamentosEsperanza\APIDepartamentosEsperanza\bin\Debug\netcoreapp3.1\Manager.pdb
